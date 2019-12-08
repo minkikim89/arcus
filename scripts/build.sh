@@ -15,6 +15,7 @@ trap "stop_build" ERR
 stop_build() {
     echo "Error has occurred. $0 has failed."
     echo "Check $arcus_directory/scripts/build.log"
+    cat $arcus_directory/scripts/build.log
     exit -1
 }
 
